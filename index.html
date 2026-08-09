@@ -11,6 +11,25 @@
 
   gtag('config', 'AW-18378779085');
 </script>
+
+<!-- Event snippet for Visualização de página (2) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18378779085/_8_ECIbFut4cEM3T17tE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grandes Esperanças — Charles Dickens</title>
@@ -442,7 +461,7 @@
       O romance de formação mais lido da literatura inglesa.
     </p>
 
-    <a href="https://link.amazon/B02TjK94T" class="cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','click',{'event_category':'compra','event_label':'adquirir_agora_hero'});">Adquirir agora</a>
+    <a href="https://link.amazon/B02TjK94T" class="cta" target="_blank" rel="noopener sponsored" onclick="gtag_report_conversion();">Adquirir agora</a>
     <a href="https://ler.amazon.com.br/sample/B009WW5A5M?clientId=share" class="cta secondary" target="_blank" rel="noopener sponsored">Ler um trecho</a>
     <div class="price-note">Disponível em e-book e capa comum · Entrega imediata</div>
   </div>
@@ -643,7 +662,7 @@
       <div class="discount-tag">-33%</div>
       <div><span class="old-price">De: R$ 92,90</span><span class="price">Por: R$ 62,11</span></div>
       <div class="installments">em até 12x de R$ 5,74 com juros <span class="installments-total">(total parcelado R$ 68,89)</span></div>
-      <a href="https://link.amazon/B005B8KIW" class="cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','click',{'event_category':'compra','event_label':'comprar_agora_bloco_final'});">Comprar agora</a>
+      <a href="https://link.amazon/B005B8KIW" class="cta" target="_blank" rel="noopener sponsored" onclick="gtag_report_conversion();">Comprar agora</a>
     </div>
   </div>
 </section>

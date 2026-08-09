@@ -725,20 +725,53 @@ function gtag_report_conversion(url) {
     dustEl.appendChild(m);
   }
 </script>
-<form
-  action="https://formspree.io/f/mnpapqry"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+<style>
+.form-duvidas {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+.form-duvidas h3 {
+  font-family: 'IM Fell English', serif;
+  color: #16181B;
+  margin-bottom: 1rem;
+}
+.form-duvidas input,
+.form-duvidas textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-duvidas button {
+  background-color: #2A3F5C;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.form-duvidas button:hover {
+  background-color: #16181B;
+}
+</style>
+
+<div class="form-duvidas">
+  <h3>Ficou com alguma dúvida sobre o livro ou a edição?</h3>
+  <form action="https://formspree.io/f/mnpapqry" method="POST">
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="message" placeholder="Sua pergunta" rows="4" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
 </body>
 </html>
